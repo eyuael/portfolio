@@ -235,7 +235,7 @@ export default function SourcedPrivacyPage() {
             <p className="mb-6 text-gray-700">If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
             <div className="mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
               <p className="text-gray-700">
-                <strong>Email:</strong> eyuaelberhe@gmail.com<br/>
+                <strong>Email:</strong> sourced.it.app@gmail.com<br/>
                 <strong>App:</strong> Sourced It - Contact section
               </p>
             </div>

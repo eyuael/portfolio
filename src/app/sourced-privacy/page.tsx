@@ -1,7 +1,12 @@
 export default function SourcedPrivacyPage() {
+  // Override global body styles for this page
+  if (typeof document !== 'undefined') {
+    document.body.style.overflow = 'auto';
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-6 py-8">
+    <div className="min-h-screen bg-gray-50 fixed inset-0 overflow-y-auto">
+      <div className="max-w-4xl mx-auto px-6 py-12 pb-20">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">Privacy Policy for Sourced It</h1>
@@ -9,7 +14,7 @@ export default function SourcedPrivacyPage() {
         </div>
 
         {/* Privacy Policy Content */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="bg-white rounded-lg shadow-lg p-8 w-full">
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
             <p className="mb-6 text-gray-700 leading-relaxed">

@@ -6,27 +6,41 @@ interface NavigationProps {
 }
 
 const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
+  const commands = [
+    { id: 'home', cmd: './home.sh', desc: 'Start here' },
+    { id: 'about', cmd: './about.sh', desc: 'Who am I?' },
+    { id: 'projects', cmd: './projects.sh', desc: 'My work' },
+    { id: 'contact', cmd: './contact.sh', desc: 'Reach out' },
+  ]
+
   return (
-    <nav className="fixed top-1/2 right-8 transform -translate-y-1/2 z-50">
-      <div className="flex flex-col space-y-4">
-        {[
-          { id: 'home', icon: <FiHome /> },
-          { id: 'projects', icon: <FiBriefcase /> },
-          { id: 'about', icon: <FiUser /> },
-          { id: 'contact', icon: <FiMail /> },
-        ].map((item) => (
-          <button
-            key={item.id}
-            onClick={() => setActiveSection(item.id)}
-            className={`p-3 rounded-full transition-colors ${
-              activeSection === item.id
-                ? 'bg-secondary text-white'
-                : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-            }`}
-          >
-            {item.icon}
-          </button>
-        ))}
+    <nav className="fixed top-4 left-4 z-50">
+      <div className="terminal-window">
+        <div className="terminal-header">
+          <span>eyuael@portfolio:~$</span>
+        </div>
+        <div className="terminal-content">
+          <div className="space-y-2">
+            <div className="terminal-text-muted text-sm">Available commands:</div>
+            {commands.map((cmd) => (
+              <div key={cmd.id} className="flex items-center space-x-2">
+                <button
+                  onClick={() => setActiveSection(cmd.id)}
+                  className={`terminal-button text-left ${
+                    activeSection === cmd.id ? 'active' : ''
+                  }`}
+                >
+                  {cmd.cmd}
+                </button>
+                <span className="terminal-text-muted text-sm">#{cmd.desc}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-4 text-xs terminal-text-muted">
+            <span className="terminal-prompt">$ </span>
+            <span className="terminal-cursor">█</span>
+          </div>
+        </div>
       </div>
     </nav>
   )

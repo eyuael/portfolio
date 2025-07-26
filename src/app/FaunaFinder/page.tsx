@@ -4,7 +4,7 @@ const FaunaFinderPrivacyPolicy = () => {
   const policyText = `
 # Privacy Policy for FaunaFinder
 
-**Last Updated: July 25, 2024**
+**Last Updated: July 26, 2025**
 
 Welcome to FaunaFinder! Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application, FaunaFinder (the "App"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.
 
@@ -72,9 +72,7 @@ We do not knowingly solicit information from or market to children under the age
 
 If you have questions or comments about this Privacy Policy, please contact us at:
 
-[Your Email Address]
-[Your Company Name]
-[Your Address]
+eyuael.berhe@gmail.com
 `;
 
   return (
